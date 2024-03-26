@@ -34,6 +34,10 @@ It is using two endpoints:
 - Breed list endpoint on https://api.thecatapi.com/v1/breeds
 - Image search endpoint on https://api.thecatapi.com/v1/images/search?breed_ids={breed.id}
 
+## Technologies 💾
+A couple of different technologies were used to develop this project.
+Mainly this app is build in Vue v3 framework, which is utilising TypeScript. 
+
 ## Project Setup ⚠️
 
 ### Compile and Hot-Reload for Development
