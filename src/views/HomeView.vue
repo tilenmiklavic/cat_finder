@@ -32,11 +32,13 @@ export default {
       }
     })
 
-    watch(selectedBreed, async (newBreedId, oldBreedId) => {
+    watch(selectedBreed, async (newBreedId) => {
+      loading.value = true
       if (newBreedId !== '') {
         try {
           const data = await getCats(catApiKey, newBreedId)
           cats.value = data
+          loading.value = false
         } catch (error) {
           console.error('Error fetching cat details:', error)
         }
@@ -86,7 +88,9 @@ export default {
 <template>
   <main>
     <TitleText title="Home" />
-    <LoadingScreen v-if="loading" />
+    <div v-if="loading" class="flex justify-center">
+      <LoadingIndicator />
+    </div>
 
     <div v-else class="flex flex-col justify-center items-center">
       <form>
