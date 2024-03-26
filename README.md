@@ -1,24 +1,40 @@
-# dog_finder
+# cat_finder 🐈
 
-This template should help get you started developing with Vue 3 in Vite.
+## Setup for dev and preview
 
-## Recommended IDE Setup
+Make sure npm is installed on your system. 
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Git clone the project on a location on your computer and move to cloned folder 
 
-## Type Support for `.vue` Imports in TS
+```sh
+cd cat_finder
+```
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+Then install all the necessary packages and dependencies
 
 ```sh
 npm install
 ```
+
+Run the preview
+
+```sh
+npm run dev
+```
+
+## Project summary 
+
+This is a technical assignment project, for interview purposes. 
+
+## API usage
+
+The app is using [The Cat API](https://thecatapi.com/) with free tier option. 
+
+It is using two endpoints:
+- Breed list endpoint on https://api.thecatapi.com/v1/breeds
+- Image search endpoint on https://api.thecatapi.com/v1/images/search?breed_ids={breed.id}
+
+## Project Setup ⚠️
 
 ### Compile and Hot-Reload for Development
 
