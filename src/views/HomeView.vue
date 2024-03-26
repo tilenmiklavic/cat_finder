@@ -1,9 +1,9 @@
 <script lang="ts">
 import { getCats, getBreeds } from '../services/cats'
 import { onMounted, ref, watch } from 'vue'
-import { Breed } from '../types/Breed'
-import { Cat } from '../types/Cat'
-import { CatProps } from '../types/CatProps'
+import type { Breed } from '../types/Breed'
+import type { Cat } from '../types/Cat'
+import type { CatProps } from '../types/CatProps'
 import CatCard from '../components/CatCard.vue'
 import ProgressBar from '../components/common/ProgressBar.vue'
 import { isEmpty } from '../services/stringUtils'
@@ -21,11 +21,6 @@ export default {
     const breeds = ref<Breed[]>([])
     const selectedBreed = ref('')
     const indexCounter = ref(0)
-    const demoProps = {
-      title: 'Demo title',
-      description: 'Demo description',
-      image: 'https://cdn2.thecatapi.com/images/MTYwNjYxNQ.jpg'
-    }
 
     onMounted(async () => {
       try {
@@ -58,6 +53,12 @@ export default {
           image: cat.url
         }
       }
+
+      return {
+        title: '',
+        description: '',
+        image: ''
+      }
     }
 
     function changeIndex(increase: boolean) {
@@ -72,7 +73,6 @@ export default {
       breeds,
       loading,
       selectedBreed,
-      demoProps,
       isEmpty,
       computedCatProps,
       cats,

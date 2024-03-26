@@ -1,7 +1,5 @@
-interface CatProps {
+export interface CatProps {
   title: string
   description: string
-  url: string
+  image: string
 }
-
-export type { CatProps }
