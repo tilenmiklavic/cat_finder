@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import BottomFooter from './components/BottomFooter.vue'
 </script>
 
 <template>
@@ -11,9 +12,13 @@ import { RouterLink, RouterView } from 'vue-router'
     </nav>
   </header>
 
-  <Suspense>
-    <RouterView />
-  </Suspense>
+  <div class="mb-24">
+    <Suspense>
+      <RouterView />
+    </Suspense>
+  </div>
+
+  <BottomFooter />
 </template>
 
 <style scoped>
